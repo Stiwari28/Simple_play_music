@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel = "icon" href = "C:\S My projects\Web development\Simple Music web application\MuSic-removebg-preview.png" sizes="16x16"
+        type = "image/x-icon">
+</head>
+<body>
+<div class="container">
+<div class="navbar">
+    <img src="C:\S My projects\Web development\Simple Music web application\MuSic-removebg-preview.png" class="logo">
+    <ul>
+        <li><a href="#">HOME</a></li><br>
+        <li><a href="#">ABOUT</a></li><br>
+        <li><a href="#">SPECIFICATION</a></li><br>
+        <li><a href="#">PRODUCTS</a></li><br>
+        <li><a href="#">CONNECT</a></li><br>
+    </ul>
+</div>
+<div class="content">
+    <div class="left-column">
+<h1><pre> The 
+        Soulful 
+                  Sound</pre></h1>
+    </div>
+    <div class="right-column" >
+<p>Click Here To Listen</p>
+<img src="C:\S My projects\Web development\Simple Music web application\play-removebg-preview.png" id="icon">
+    </div>
+</div>
+</div>
+<audio id="my_song"><source src="Tere_Bina_Zindagi_Se_-_SANAM___Kishore_Kumar_&_Lata_Mangeshkar___Music_Video(128k).mp3" type="audio/mp3"></audio>
+
+<script>
+    var mySong= document.getElementById("my_song");
+    var icon= document.getElementById("icon");
+
+    icon.onclick= function(){
+        if(mySong.paused)
+    {
+ mySong.play();
+ icon.src="pause-removebg-preview.png";
+    } else{
+        mySong.pause();
+        icon.src="play-removebg-preview.png"; 
+    }
+}
+</script>
+</body>
+</html>
